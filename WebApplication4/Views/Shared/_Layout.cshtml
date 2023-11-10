@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant</title>
+    <link href="@Url.Content("~/Content/StlyeSheetForDefault.css")" rel="stylesheet" type="text/css" />
+    <style>
+
+        body > nav {
+            border-radius: 10px;
+            background-color: black;
+            opacity: 0.85;
+        }
+
+        #guidance > ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
+
+            #guidance > ul > li {
+                margin-right: 20px;
+                display: inline-block;
+                width: 30%;
+                text-align: center;
+            }
+
+        .nav-link {
+            text-decoration: none;
+            color: crimson;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="guidance">
+        <ul>
+            <li>>@Html.ActionLink("Home", "Index", "ValorantHome", new { area = "" }, new { @class = "nav-link" })</li>
+            <li><>@Html.ActionLink("Agent", "Agent", "ValorantHome", new { area = "" }, new { @class = "nav-link" })</li>
+            <li><>@Html.ActionLink("Leaderboard", "Index", "Players", new { area = "" }, new { @class = "nav-link" })</li>
+
+        </ul>
+    </nav>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <!-- 页面内容 -->
+    @RenderBody()
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact:<a href="mailto:www.zifengamazing@gmail.com">www.zifengamazing@gmail.com</a> </p>
+            </div>
+            <div class="friend-links">
+                <p>Offical Website:<a href="https://playvalorant.com">Valorant</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+@{
+    string JettImage = Url.Content("~/Content/Agent/Jett.jpg");
+}
+@Scripts.Render("~/Scripts/ValorantHome/Agent.js")
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VALORANT</title>
+    <link href="@Url.Content("~/Content/ValorantHome/StyleSheet1.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/ValorantHome/Agent1.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="gap-between-guidance-and-container"></div>
+    <div class="container">
+        <div class="category">
+            <ul>
+                <li><a href="#" onclick="showAgents('DUELIST')">DUELIST</a></li>
+                <li><a href="#" onclick="showAgents('CONTROLLER')">CONTROLLER</a></li>
+                <li><a href="#" onclick="showAgents('SENTINEL')">SENTINEL</a></li>
+                <li><a href="#" onclick="showAgents('INITIATOR')">INITIATOR</a></li>
+            </ul>
+        </div>
+        <div class="gap"></div>
+        <div class="agent-list">
+            <ul id="agent-list">
+                <li><a href="#" onclick="showAgentInfo('Jett')">Jett</a></li>
+                <li><a href="#" onclick="showAgentInfo('Raze')">Raze</a></li>
+                <li><a href="#" onclick="showAgentInfo('Reyna')">Reyna</a></li>
+                <li><a href="#" onclick="showAgentInfo('Yoru')">Yoru</a></li>
+                <li><a href="#" onclick="showAgentInfo('Neon')">Neon</a></li>
+                <li><a href="#" onclick="showAgentInfo('Phoneix')">Phoneix</a></li>
+            </ul>
+        </div>
+        <div class="gap"></div>
+        <div class="agent-info" id="agent-info">
+            <div class="category-info" id="category-info">
+                <p>Duelists are one of the four roles that agents are divided into in VALORANT. Agents under this role have abilities that allow them to focus on being the first to enter sites and engage the enemy.</p>
+                <p>Unlike other Agent classes, the Signature abilities for Duelists need to be recharged with 2 kills rather than a period of time.</p>
+            </div>
+            <div class="agent-details" id="agent-details">
+                <img src="@JettImage" alt="Jett">
+            </div>
+            <div id="agent-information">
+                <p>
+                    Han Sunwoo  hails from South Korea, with possible links to the Insa-dong neighborhood in Seoul. As a chef in her early life, she was involved in an incident relating to her wind-like radiant powers at the restaurant she worked at, causing a "freak storm" that all but destroyed the building. Han fled the scene soon after.
+
+                    Later on, Han would be recruited by the VALORANT Protocol to become its tenth agent, "Jett". Whilst working for the Protocol however, an incident occurred in Venice that destroyed part of the city. When authorities issued warrants for the arrests of the perpetrators, one of them was revealed to look exactly identical to Jett. Though Jett herself had nothing to do with the mission, the rest of the world now believed that she was a threat to them. She couldn't explain that it wasn't her to those she know outside of VALORANT, unable to even understand what was going on herself, and it left them feeling disgusted, horrified, and ashamed at her, forcing her to go on the run once more.
+
+                    It has since been understood that the lookalike was actually a mirror version of herself from another Earth, clearing Jett of any wrongdoing. Unable to reveal any info associated with the VALORANT Protocol however, and unable to convince anyone of her innocence in a population that knows nothing of alternate Earths, to the rest of the world Jett remains one of its most dangerous radiants.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var Jett = '@JettImage';
+        var  Raze= '@Url.Content("~/Content/Agent/Raze.jpg")';
+        var  Reyna= '@Url.Content("~/Content/Agent/Reyna.jpg")';
+        var  Yoru= '@Url.Content("~/Content/Agent/Yoru.jpg")';
+        var  Neon= '@Url.Content("~/Content/Agent/Neon.jpg")';
+        var Phoneix = '@Url.Content("~/Content/Agent/Phoenix.jpg")';
+
+        var  Omen= '@Url.Content("~/Content/Agent/Omen.jpg")';
+        var  Brimstone= '@Url.Content("~/Content/Agent/Brimstone.jpg")';
+        var  Viper= '@Url.Content("~/Content/Agent/Viper.jpg")';
+        var  Astra= '@Url.Content("~/Content/Agent/Astra.png")';
+        var  Harbor= '@Url.Content("~/Content/Agent/Harbor.png")';
+
+        var  Sage= '@Url.Content("~/Content/Agent/Sage.jpg")';
+        var  Cypher= '@Url.Content("~/Content/Agent/Cypher.jpg")';
+        var  Killjoy= '@Url.Content("~/Content/Agent/Killjoy.jpg")';
+        var  Deadlock= '@Url.Content("~/Content/Agent/Deadlock.jpeg")';
+        var  Chamber= '@Url.Content("~/Content/Agent/Chamber.png")';
+
+        var  Breach= '@Url.Content("~/Content/Agent/Breach.jpg")';
+        var  Fade= '@Url.Content("~/Content/Agent/Fade.jpg")';
+        var  Gekko= '@Url.Content("~/Content/Agent/Gekko.png")';
+        var  KO= '@Url.Content("~/Content/Agent/Kay_o.jpg")';
+        var  Skye= '@Url.Content("~/Content/Agent/Skye.png")';
+        var  Sova= '@Url.Content("~/Content/Agent/Sova.jpg")';
+
+    </script>
+</body>
+
+</html>

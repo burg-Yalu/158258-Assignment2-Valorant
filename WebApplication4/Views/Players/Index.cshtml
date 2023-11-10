@@ -1,0 +1,46 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<Ass2_Valorant.Models.Player>
+
+@Styles.Render("~/Content/LeaderRank.css")
+@using (Html.BeginForm("FilterByNation", "Players", FormMethod.Get))
+{
+    <div class="form-group">
+        <label for="nation">Filter by Nation:</label>
+        @Html.DropDownList("nation", new SelectList(Model.Select(p => p.Region.Nation).Distinct()), "All Nations")
+        <input type="submit" value="Filter">
+    </div>
+}
+@using (Html.BeginForm("Search", "Players", FormMethod.Get))
+{
+    <div class="form-group">
+        <label for="searchTerm">Search:</label>
+        @Html.TextBox("searchTerm")
+        <input type="submit" value="Search">
+    </div>
+}
+@using (Html.BeginForm("SortByRank", "Players", FormMethod.Get))
+{
+    <input type="submit" value="Sort" />
+}
+<div id="dont">
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Rank</th>
+        <th>Nation</th>
+    </tr>
+    @foreach (var player in Model)
+    {
+        <tr>
+            <td>@player.ID</td>
+            <td>@player.Rank</td>
+            <td>@player.Region.Nation</td>
+        </tr>
+    }
+</table>
+</div>
+<div class="pagination-container">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+</div>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+

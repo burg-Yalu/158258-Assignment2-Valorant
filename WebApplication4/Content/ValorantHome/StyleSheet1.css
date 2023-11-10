@@ -1,0 +1,97 @@
+﻿
+body {
+    background-image: url('1322753.jpeg');
+    background-size: cover;
+    font-family: VA, serif;
+    padding: 10px 30px 0 30px;
+}
+#guidance > ul > li > a {
+    text-decoration: none;
+    color: crimson;
+    font-size: 25px;
+}
+
+/*#header{*/
+/*    position: relative;*/
+/*    background-color: #282c34;*/
+/*}*/
+#HeaderForWelcome {
+    width: 50%;
+    padding: 20px; /* 内边距，可根据需要调整 */
+    box-sizing: border-box; /* 包括内边距在宽度内 */
+}
+
+    #HeaderForWelcome h1, p {
+        width: 80%; /* 宽度100%，以便在父容器内自动分配宽度 */
+        word-wrap: break-word; /* 允许文本自动换行 */
+        color: black;
+    }
+/*下面是切换图片的CSS*/
+#slider {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+    #slider img {
+        max-width: 100%;
+    }
+
+    #slider ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 300%;
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+        #slider ul li {
+            width: 33.33%;
+            height: 100%;
+        }
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.Part {
+    padding-top: 100px;
+    display: flex;
+    font-size: larger;
+}
+
+#Agent {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+    #Agent > img {
+        width: 100%;
+        height: auto;
+    }
+
+.Story {
+    padding-left: 80px;
+    flex: 0 0 40%;
+    /*width: 50%;*/
+    /*float: right;*/
+    /*box-sizing: border-box;*/
+    /*padding: 10px;*/
+}

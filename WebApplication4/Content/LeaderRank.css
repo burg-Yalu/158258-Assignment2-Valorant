@@ -1,0 +1,93 @@
+﻿/* 样式表 */
+
+/* 圆角20px */
+
+#dont {
+    border-radius: 20px;
+    background-color: rgba(236, 231, 225, 1.9);
+}
+.table {
+    border-radius: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    /* 表格每一行中间的细线分割 */
+
+    .table th, .table td {
+        border-bottom: 1px solid black;
+        padding: 15px;
+        width: 33.33%;
+        text-align: center; /* 居中文本 */
+    }
+
+/* 分页按钮圆角矩形边框，蓝底白字 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination {
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+    .pagination li {
+        text-align: center;
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+
+        .pagination li a {
+            text-align: center;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 2px;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .pagination li.active a {
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+
+
+/* 排序，筛选和搜索按钮圆角矩形边框，蓝底白字 */
+input[type="submit"] {
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* 搜索框圆角矩形边框，蓝底白字 */
+.form-group input[type="text"] {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* 下拉菜单样式 */
+.form-group select {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+}
